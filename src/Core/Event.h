@@ -1,6 +1,7 @@
 #ifndef ___CORE_EVENT_H___
 #define ___CORE_EVENT_H___
 
+#include "Core/Event/EHC.h"
 #include "Core/Event/Event.h"
 #include "Core/Event/KeyboardPressedEvent.h"
 #include "Core/Event/KeyboardReleasedEvent.h"
