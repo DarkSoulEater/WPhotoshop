@@ -3,11 +3,12 @@
 
 #include "stack"
 #include "Plug/Math/TransformStack.h"
+using plug::TransformStack;
 #include "Math/Math.h"
 
-class TransformStack : public plug::TransformStack {
+class WTransformStack : public plug::TransformStack {
 public:
-    TransformStack();
+    WTransformStack();
 
   /**
    * \brief Enter a transform to the top of the stack and pushes the new
