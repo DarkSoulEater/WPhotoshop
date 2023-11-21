@@ -3,7 +3,10 @@
 
 #include "Plug/Graphics/RenderTarget.h"
 using plug::RenderTarget;
-#include "Graphics/Graphics.h"
+
+#include "Graphics/VertexArray.h"
+#include "Graphics/Texture.h"
+#include "Graphics/Color.h"
 
 /**
  * @brief Framebuffer object with single color attachment (as texture) and
@@ -41,7 +44,7 @@ public:
    *
    * @return unsigned
    */
-  unsigned getNativeHandle(void) const;
+  virtual unsigned getNativeHandle(void) const override;
 };
 
 #endif // ___RENDERTARGET_H___
