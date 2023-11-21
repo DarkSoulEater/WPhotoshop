@@ -8,6 +8,7 @@
 #include "UI/LayoutBox/LayoutBox.h"
 
 class Widget : public plug::Widget {
+public:
   /**
    * @brief Draw widget
    *
