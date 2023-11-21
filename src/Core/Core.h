@@ -1,8 +1,11 @@
 #ifndef ___CORE_H___
 #define ___CORE_H___
 
+#include <vector>
+#include "SFML/Graphics.hpp"
 #include "UI/Widget.h"
 #include "Core/Event.h"
+#include "Graphics/Graphics.h"
 
 class Core {
 public:
@@ -24,6 +27,7 @@ private:
 
 private:
     sf::RenderWindow main_window_;
+    SFMLRenderTarget rt_window_; // TODO: add init in ctor
 
     std::vector<Widget*> widgets_;
 };

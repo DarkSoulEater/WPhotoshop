@@ -30,9 +30,9 @@ void Core::Display() {
 }
 
 void Core::Draw() {
-    WTransformStack stack;
+    WTransformStack tr_stack;
     for (Widget* widget : widgets_) {
-        widget->draw(main_window_, stack);
+        widget->draw(tr_stack, rt_window_);
     }
 }
 
@@ -108,7 +108,8 @@ void Core::PollEvent() {
 }
 
 void Core::PushEvent(Event &event) {
-    EHC ehc;
+    WTransformStack tr_stack;
+    EHC ehc = {tr_stack};
     for (Widget* widget : widgets_) {
         widget->onEvent(event, ehc);
     }
