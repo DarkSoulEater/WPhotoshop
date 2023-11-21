@@ -3,7 +3,7 @@
 
 #include "Graphics/Color.h"
 #include "Graphics/PrimitiveType.h"
-#include "Graphics/RenderTraget.h"
+#include "Graphics/RenderTarget.h"
 #include "Graphics/Texture.h"
 #include "Graphics/VertexArray.h"
 

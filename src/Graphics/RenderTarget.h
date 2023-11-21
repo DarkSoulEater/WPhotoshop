@@ -1,7 +1,8 @@
-#ifndef ___RENDERTRAGET_H___
-#define ___RENDERTRAGET_H___
+#ifndef ___RENDERTARGET_H___
+#define ___RENDERTARGET_H___
 
 #include "Plug/Graphics/RenderTarget.h"
+using plug::RenderTarget;
 #include "Graphics/Graphics.h"
 
 /**
@@ -10,7 +11,7 @@
  * SFML and SDL will perform all the required magic by themselves)
  *
  */
-class RenderTraget : public plug::RenderTarget {
+class SFMLRenderTarget : public plug::RenderTarget {
 public:
   /**
    * @brief Draw vertex array with specified vertex colors
@@ -43,4 +44,4 @@ public:
   unsigned getNativeHandle(void) const;
 };
 
-#endif // ___RENDERTRAGET_H___
+#endif // ___RENDERTARGET_H___
