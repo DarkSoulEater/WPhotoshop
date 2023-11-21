@@ -1,11 +1,9 @@
 #ifndef ___KEYBOARDRELEASEDEVENT_H___
 #define ___KEYBOARDRELEASEDEVENT_H___
 
-#include "SFML/Graphics.hpp"
 #include "Core/Event/Event.h"
+#include "Core/Event/KeyCode.h"
 #include "Math/Vector2.h"
-
-using KeyCode = sf::Keyboard::Key;
 
 struct KeyboardReleasedEvent : public Event {
     KeyboardReleasedEvent(KeyCode key, Vec2d position) : Event(EventType::KeyboardReleased), key_id(key), pos(position) {}
