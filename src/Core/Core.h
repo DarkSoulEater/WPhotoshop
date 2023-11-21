@@ -5,7 +5,6 @@
 #include "SFML/Graphics.hpp"
 #include "UI/Widget.h"
 #include "Core/Event.h"
-#include "Graphics/Graphics.h"
 
 class Core {
 public:

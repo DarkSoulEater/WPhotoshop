@@ -49,6 +49,9 @@ void Core::PollEvent() {
     sf::Vector2i imouse_pos = sf::Mouse::getPosition(main_window_);
     Vec2d mouse_pos = Vec2d(imouse_pos.x, imouse_pos.y);
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wswitch-enum"
+
     sf::Event sfml_event;
     while (main_window_.pollEvent(sfml_event)) {
     switch (sfml_event.type) {
@@ -103,8 +106,20 @@ void Core::PollEvent() {
             SetControlButton(event);
             PushEvent(event);
         } break;
+
+        case sf::Event::Resized: {
+            assert(0);
+        } break;
+
+        case sf::Event::LostFocus: {
+            /* Nothing */
+        }
+
+        default: {/* Nothing */}
     }
     }
+
+#pragma GCC diagnostic pop
 }
 
 void Core::PushEvent(Event &event) {
